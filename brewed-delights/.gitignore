@@ -1,0 +1,4 @@
+/config/services.local.php
+/logs/*.log
+/sql/brewed_delights_current.sql
+/vendor/

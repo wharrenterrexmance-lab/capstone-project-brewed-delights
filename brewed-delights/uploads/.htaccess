@@ -1,0 +1,11 @@
+# This folder is for static uploads only. Even if a malicious file ever
+# ended up here, this prevents the server from executing it as PHP.
+<FilesMatch "\.(php|phtml|php3|php4|php5|php7|phar)$">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order deny,allow
+        Deny from all
+    </IfModule>
+</FilesMatch>
